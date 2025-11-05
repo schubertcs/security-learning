@@ -1,0 +1,64 @@
+# ------------------------------
+# Hugo build and cache files
+# ------------------------------
+/public/
+/resources/
+/hugo_stats.json
+/.hugo_build.lock
+
+# ------------------------------
+# OS / Editor / Tooling
+# ------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
+*.swp
+*.swo
+*.bak
+*.tmp
+*~
+.cache/
+.vscode/
+.idea/
+*.code-workspace
+
+# ------------------------------
+# Node / JS tooling (if used for themes or pipelines)
+# ------------------------------
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ------------------------------
+# Environment / Config files
+# ------------------------------
+.env
+.env.*
+!.env.example
+
+# ------------------------------
+# Logs
+# ------------------------------
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ------------------------------
+# Hugo Themes (if added as submodules, ignore local changes)
+# ------------------------------
+/themes/**/exampleSite/
+/themes/**/resources/
+/themes/**/public/
+/themes/**/node_modules/
+/themes/**/.hugo_build.lock
+
+# ------------------------------
+# Backup / Misc
+# ------------------------------
+*.orig
+*.rej
+*.bak
+*.tmp
