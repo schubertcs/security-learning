@@ -1,4 +1,68 @@
-baseURL: "https://example.org/"
+baseURL: "https://schubertcs.github.io/security-learning/"
 languageCode: "en-us"
-title: "My New Hugo Site"
+title: "Security Learning with Chris"
 theme: "PaperMod"
+
+enableRobotsTXT: true
+pagination:
+  pagerSize: 10
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # required for search
+
+params:
+  env: production
+  description: "Understanding real-world attacks against modern software systems"
+
+  # UI / Reading experience
+  showReadingTime: true
+  ShowCodeCopyButtons: true
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: false
+
+  # Table of contents
+  showToc: true
+  TocOpen: false
+
+  # Home page behavior
+  showRecentPosts: true
+
+  # PaperMod appearance
+  defaultTheme: auto
+  disableThemeToggle: false
+
+  # Optional but useful
+  displayFullLangName: true
+
+  mainSections:
+    - attacks
+
+menu:
+  main:
+    - identifier: attacks
+      name: Attacks
+      url: /attacks/
+      weight: 1
+
+    - identifier: tooling
+      name: Tooling
+      url: /tooling/
+      weight: 2
+
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 3
+
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 4
+
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 5
