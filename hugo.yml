@@ -66,3 +66,7 @@ menu:
       name: Search
       url: /search/
       weight: 5
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

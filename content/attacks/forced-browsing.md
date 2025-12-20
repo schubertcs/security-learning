@@ -29,6 +29,108 @@ https://www.my-webstorage.com/ryan-reynolds/pictures
 
 At some point they might be lucky and find some existing username and can then freely access that user's data.
 
+## The Demo
+
+Interactive example: this simulates how a vulnerable application might respond to different URLs. No real requests are made.
+
+<div class="fake-browser">
+  <div class="browser-bar">
+    <input
+      id="fake-url"
+      type="text"
+      value="/christoph-schubert/documents/bank-statements"
+    />
+    <button id="go-btn" aria-label="Navigate">→</button>
+  </div>
+
+  <div id="fake-content" class="browser-content"></div>
+</div>
+
+<style>
+.fake-browser {
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  margin: 1.5rem 0;
+  background: var(--entry);
+  font-family: system-ui, sans-serif;
+}
+
+.browser-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: var(--theme);
+  border-bottom: 1px solid var(--border);
+}
+
+.browser-bar button {
+  padding: 0.25rem 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background: var(--entry);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+.browser-bar button:hover {
+  background: var(--secondary);
+  color: var(--theme);
+}
+
+.browser-bar input {
+  flex: 1;
+  padding: 0.4rem;
+  font-family: monospace;
+  background: var(--entry);
+  color: var(--primary);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px var(--border);
+}
+
+.browser-bar input::placeholder {
+  color: var(--secondary);
+}
+
+.browser-content {
+  padding: 1rem;
+  background: var(--entry);
+  color: var(--primary);
+  min-height: 4rem;
+}
+</style>
+
+<script>
+  const content = document.getElementById("fake-content");
+  const input = document.getElementById("fake-url");
+  const button = document.getElementById("go-btn");
+
+  function navigate() {
+    const url = input.value.trim();
+
+    if (url === "/christoph-schubert/documents/bank-statements") {
+      content.innerHTML =
+        "<strong>Bank Statements</strong><br>January.pdf<br>February.pdf";
+    } else if (url.startsWith("/jeff-bezos")) {
+      content.innerHTML =
+        "<strong>Jeff Bezos</strong><br>taxes.xlsx<br>private-notes.txt";
+    } else {
+      content.innerHTML = "<em>404 Not Found</em>";
+    }
+  }
+
+  button.addEventListener("click", navigate);
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") navigate();
+  });
+
+  navigate();
+</script>
+
+
 ## The Impact
 This primarily leads to unauthorized data access. Depending on the exposed functionality, attackers may also be able to perform actions on behalf of other users or escalate their privileges.
 
