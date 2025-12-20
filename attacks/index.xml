@@ -1,23 +1,5 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
-  <channel>
-    <title>Attacks on Security Learning with Chris</title>
-    <link>https://schubertcs.github.io/security-learning/attacks/</link>
-    <description>Recent content in Attacks on Security Learning with Chris</description>
-    <generator>Hugo -- 0.152.2</generator>
-    <language>en-us</language>
-    <lastBuildDate>Fri, 19 Dec 2025 21:21:02 +0100</lastBuildDate>
-    <atom:link href="https://schubertcs.github.io/security-learning/attacks/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Forced Browsing</title>
-      <link>https://schubertcs.github.io/security-learning/attacks/forced-browsing/</link>
-      <pubDate>Fri, 19 Dec 2025 21:21:02 +0100</pubDate>
-      <guid>https://schubertcs.github.io/security-learning/attacks/forced-browsing/</guid>
-      <description>&lt;h2 id=&#34;the-setup&#34;&gt;The Setup&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Attacks on Security Learning with Chris</title><link>https://schubertcs.github.io/security-learning/attacks/</link><description>Recent content in Attacks on Security Learning with Chris</description><generator>Hugo -- 0.153.0</generator><language>en-us</language><lastBuildDate>Fri, 19 Dec 2025 21:21:02 +0100</lastBuildDate><atom:link href="https://schubertcs.github.io/security-learning/attacks/index.xml" rel="self" type="application/rss+xml"/><item><title>Forced Browsing</title><link>https://schubertcs.github.io/security-learning/attacks/forced-browsing/</link><pubDate>Fri, 19 Dec 2025 21:21:02 +0100</pubDate><guid>https://schubertcs.github.io/security-learning/attacks/forced-browsing/</guid><description>&lt;h2 id="the-setup"&gt;The Setup&lt;/h2&gt;
 &lt;p&gt;Assume we have a browser-based storage application similar to Google Drive or OneDrive in front of us. As the user &lt;em&gt;Christoph Schubert&lt;/em&gt; you might see this URL in your address bar when looking at the folder &lt;code&gt;documents/bank-statements&lt;/code&gt;:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-url&#34; data-lang=&#34;url&#34;&gt;https://www.my-webstorage.com/christoph-schubert/documents/bank-statements
-&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&#34;the-attack&#34;&gt;The Attack&lt;/h2&gt;
-&lt;p&gt;Taking a deeper look at this URL you can see the username &lt;code&gt;christoph-schubert&lt;/code&gt; in there. An attacker will now try to replace this valid username with other values, hoping that they might be able to see the data of that new, guessed user. If the backend does not properly verify that the authenticated user is allowed to access the requested resource, the request may succeed.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+&lt;pre tabindex="0"&gt;&lt;code class="language-url" data-lang="url"&gt;https://www.my-webstorage.com/christoph-schubert/documents/bank-statements
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id="the-attack"&gt;The Attack&lt;/h2&gt;
+&lt;p&gt;Taking a deeper look at this URL you can see the username &lt;code&gt;christoph-schubert&lt;/code&gt; in there. An attacker will now try to replace this valid username with other values, hoping that they might be able to see the data of that new, guessed user. If the backend does not properly verify that the authenticated user is allowed to access the requested resource, the request may succeed.&lt;/p&gt;</description></item></channel></rss>
